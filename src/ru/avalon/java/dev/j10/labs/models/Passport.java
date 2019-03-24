@@ -1,40 +1,38 @@
 package ru.avalon.java.dev.j10.labs.models;
 
-/**
- * Представление о паспортных данных человека.
- * <p>
- * Паспортные данные должны включать:
- * <ol>
- *  <li> серию и номер документа;
- *  <li> имя;
- *  <li> фамилию;
- *  <li> отчество;
- *  <li> второе имя;
- *  <li> день рождения;
- *  <li> дату выдачи;
- *  <li> орган, выдавший документ.
- * </ol>
- */
-class Passport {
+import ru.avalon.java.dev.j10.labs.commons.Address;
 
-    /*
-     * TODO(Студент): Закончить определение класса.
-     *
-     * 1. Объявить атрибуты класса.
-     *
-     * 2. Определить необходимые методы класса. Подумайте о
-     *    том, какие методы должны существовать в классе,
-     *    чтобы обеспечивать получение всей необходимой
-     *    информации о состоянии объектов данного класса.
-     *    Все ли поля обязательно будут проинициализированы
-     *    при создании экземпляра?
-     *
-     * 3. Создайте все необходимые конструкторы класса.
-     *
-     * 4. Помните о возможности существования перегруженных
-     *    конструкторов.
-     *
-     * 5. Обеспечте возможность использования класса за
-     *    пределами пакета.
-     */
+public class Passport {
+    //параметры не заданы
+    private String serialNo; 
+    private String name;
+    private String surname;
+    private String otchestvo;
+    private String secName = "Bunny"; //Что бы работал getFullName в Person
+    private String bDay;
+    private String date;
+    private String liver; //орган, выдавший пасспорт
+    
+    public Passport(String name, String surname, String otchestvo) {
+        this.name = name;
+        this.surname = surname;
+        this.otchestvo = otchestvo;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+     public String getSurname(){
+        return surname;
+    } 
+     
+    public String getOtchestvo(){
+        return otchestvo;
+    }   
+    
+    public String getSecName(){
+        return secName;
+    }   
+  
 }
