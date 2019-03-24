@@ -1,15 +1,19 @@
-/*
- * TODO(Студент): Создайте класс Address.
- *
- * 1. Добавте файл в пакет ru.avalon.java.dev.j10.labs.commons.
- *
- * 2. Создайте класс, видимый из пакета. Подумайте о том
- *    Какое имя должен иметь класс, если он объявленн в этом
- *    файле.
- *
- * 3. Подумайте над тем, какие переменные должены быть
- *    определены в классе.
- *
- * 4. Подумайте над тем, какие методы должны быть объявлены
- *    в классе.
- */
+package ru.avalon.java.dev.j10.labs.commons;
+
+public class Address{
+    // атрибуты класса- адрес
+    private String country = "Россия";
+    private String city = "Санкт-Петербург";
+    private String street = "Пушкина";
+    private int hNo = 18;
+    private int aNo = 5;
+    
+    // публичные сеттеры адреса
+    
+    // методы класса
+    // полный адрес 
+    public String getAddress(){
+        return "Адрес регистрации: " + country + ", " + city + ", " + street + 
+                ", " + hNo + ", " + aNo + ".";
+    }
+}
