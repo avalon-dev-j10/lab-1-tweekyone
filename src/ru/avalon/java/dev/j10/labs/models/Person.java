@@ -4,13 +4,17 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
 
 public class Person {
     
-    Passport passport;
-    Address fullAddress;
+    private Passport passport;
+    private Address fullAddress;
     
     //конструкторы класса Person, инициализирующий Passport и Address
     public Person(String name, String surname, String otchestvo) {
         passport = new Passport(name, surname, otchestvo);
-        fullAddress = new Address();
+    }
+    
+    public void setAddress(String country, String city, String street, int hNo, 
+            int aNo){
+        fullAddress = new Address(country, city, street, hNo, aNo);
     }
     
     //Возвращаем имя человека
